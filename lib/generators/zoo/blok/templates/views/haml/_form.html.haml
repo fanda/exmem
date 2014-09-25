@@ -1,0 +1,6 @@
+= semantic_form_for <%= item_path instance_variable: true %>, :html => {:class => 'new'} do |f|
+  = f.inputs do
+  <%- for attribute in model_attributes -%>
+    = f.input :<%= attribute.name %>, :label => false, :input_html => {:title => t('.<%= attribute.name %>')}
+  <%- end -%>
+  = f.submit :value => t('.submit')

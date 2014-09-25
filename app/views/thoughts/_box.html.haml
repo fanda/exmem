@@ -1,0 +1,10 @@
+.tit
+  %h2.di=t '.title'
+  = image_tag 'ebox.png', :class => 'right show btn-ebox'
+.ebox.dn
+  = render :partial => '/shared/ebox'
+.content
+  - if @thought
+    = render :partial => '/thoughts/form'
+    %hr
+  = render :partial => '/thoughts/index'

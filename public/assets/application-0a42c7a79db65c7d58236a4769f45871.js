@@ -1,0 +1,1 @@
+(function(){$(document).ready(function(){return $("a[rel*=facebox]").facebox({loading_image:"loading.gif",close_image:"closelabel.gif"}),new ControlApp("body",{}),$(".box").each(function(){return new ControlBox($(this),{})})})}).call(this);

@@ -1,0 +1,23 @@
+%section#services_new.services
+  %h1=t '.title'
+
+  %h2=t '.new_auth'
+
+  %p
+    = t 'provider'
+    %b
+      = @authhash[:provider]
+    <br />
+    = t 'name'
+    %b
+      = @authhash[:name]
+    <br />
+    = t 'email'
+    %b
+      = @authhash[:email]
+    <br />
+
+  = form_tag :controller => 'services', :action => 'newaccount' do
+    = submit_tag t('.confirm_create')
+    = submit_tag t('.cancel')
+

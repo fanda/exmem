@@ -1,0 +1,5 @@
+= semantic_form_for @phone_number, :html => {:class => 'new'} do |f|
+  = f.inputs do
+    = f.input :name, :label => false, :input_html => {:title => t('.name')}
+    = f.input :number, :label => false, :input_html => {:title => t('.number')}
+  = f.submit :value => t('.submit')

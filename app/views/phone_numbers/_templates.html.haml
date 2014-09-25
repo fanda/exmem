@@ -1,0 +1,19 @@
+%script#phone_numbers_EJS{"type" => "text/ejs"}
+  :plain
+    <% items.each( function(item, i) { %>
+      <div class='phone_number_<%= i %>'>
+        <p>
+          <%= item.name %>
+          <%= item.number %>
+        </p>
+        <span class="actions">
+          <a href="#" class="edit">#{t 'edit'}</a>  <a href="#" class="delete">#{t 'delete'}</a> <a href="#" class="odorik">#{t 'odorik'}</a>
+        </span>
+      </div>
+    <% }) %>
+
+%script#phone_number_edit_EJS{"type" => "text/ejs"}
+  = semantic_form_for phone_number_ejs_template_object, :method => :put do |f|
+    = f.inputs do
+      = f.input :name, :label => false
+      = f.input :number, :label => false

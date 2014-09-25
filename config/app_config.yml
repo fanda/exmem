@@ -1,0 +1,15 @@
+all_environments: &all_environments
+  columns_count: 7
+  locales: ['en', 'cz']
+
+development:
+  <<: *all_environments
+  email: 'k@gmil.com'
+  ga_id: xxx
+
+
+production:
+  <<: *all_environments
+  email: 'fek@gma.com'
+  ga_id: xxx
+

@@ -1,0 +1,83 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  or: or
+  edit: Edit
+  delete: Delete
+  title: Organize your extern memory with EXMEM.ORG!
+  name: Name
+  email: Email
+  provider: Provider
+  signout: Sign out
+  main_board: Main board
+  close: Close
+  new_board_name: Board name
+  layouts:
+    header:
+      change_background: Change background image
+      change_boxstyle: Change box style
+      change_user: Change user settings
+      settings: Settings
+      language: Language
+      board: Board
+      new_board: New board
+      remove_board: Remove
+  shared:
+    ebox:
+      box_color: Box color
+      white: White
+      red: Red
+      green: Green
+      blue: Blue
+      yellow: Yellow
+  services:
+    signup:
+      title: You has been authenticated at chosen service!
+      new_auth: Please, confirm new account
+      confirm_create: Create new account
+      cancel: Cancel
+    signin:
+      title: Choose the authentication provider
+      how_to_signin:
+      still_dont_know_how: Still don't know how to sign in?
+  links:
+    form:
+      title: Title
+      url: URL
+      about: About
+      submit: Save link
+    box:
+      title: Links
+  phone_numbers:
+    form:
+      name: Name
+      number: Phone Number
+      submit: Save new number
+    box:
+      title: Phone Numbers
+  thoughts:
+    form:
+      text: Text
+      public: Public
+      submit: Submit thought
+    box:
+      title: Thoughts
+  rss_boxes:
+    form:
+      submit: Update RSS reader
+      title: Title
+      url_hint: Type here if You have one URL
+      feeds_hint: "each URL on own line here:"
+      url: One feed
+      feeds: Many feeds
+  alert:
+    link: Title and URL values are both required
+    thought: Text is required
+    phone_number: Name and number are both required
+  facebox:
+    addbox:
+      title: Choose a new box
+
+
+  welcome: <strong>EXMEM.ORG is the service for storing personal information</strong> in human readable organized form. <br/><br/>This page is Sandbox for testing purposes. No change You do is persistent.

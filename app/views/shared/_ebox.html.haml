@@ -1,0 +1,10 @@
+- if Rails.env.development?
+  = image_tag 'delete.png', :class => 'right show btn-rm-box'
+.out
+=t '.box_color'
+%select.colour
+  %option{:value => ''}=t '.white'
+  %option{:value => 'red'}=t '.red'
+  %option{:value => 'green'}=t '.green'
+  %option{:value => 'blue'}=t '.blue'
+  %option{:value => 'yellow'}=t '.yellow'

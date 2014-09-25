@@ -1,0 +1,8 @@
+.tit
+  %h2.di=@rss_box.title||t('.title')
+  = image_tag 'ebox.png', :class => 'right show btn-ebox'
+.ebox.dn
+  = render :partial => '/shared/ebox'
+  = render :partial => '/rss_boxes/form', :locals => {:method => :put}
+.content
+  = render :partial => '/rss_boxes/index'

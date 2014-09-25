@@ -1,0 +1,21 @@
+%script#<%= instances_name %>_EJS{"type" => "text/ejs"}
+  :plain
+    <%= '<% items.each( function(item, i) { %>' %>
+      <%= '<div class="' +instance_name+ '_<%= i %>">' %>
+        <p>
+        <%- for attribute in model_attributes -%>
+          <%= '<%= item.'+attribute.name+' %>' %>
+        <%- end -%>
+        </p>
+        <span class="actions">
+          <a href="#" class="edit">#{t 'edit'}</a> | <a href="#" class="delete">#{t 'delete'}</a>
+        </span>
+      </div>
+    <%= '<% }) %>' %>
+
+%script#<%= instance_name %>_edit_EJS{"type" => "text/ejs"}
+  = semantic_form_for <%= instance_name %>_ejs_template_object, :method => :put do |f|
+    = f.inputs do
+    <%- for attribute in model_attributes -%>
+      = f.input :<%= attribute.name %>, :label => false
+    <%- end -%>

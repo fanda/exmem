@@ -1,0 +1,14 @@
+<script type="text/javascript">
+$(document).ready(function() {
+  <%
+    boxes = if @board.pref_columns
+      @board.pref_columns.values.flatten
+    else
+      ['links_box', 'phone_numbers_box', 'thoughts_box']
+    end
+  %>
+  <% boxes.each do |box| %>
+    <%= render_jsinit_for box %>
+  <% end %>
+});
+</script>

@@ -1,0 +1,8 @@
+= semantic_form_for @link, :html => {:class => 'new'} do |f|
+  = f.inputs do
+    = f.input :title, :label => false, :input_html => {:title => t('.title')}
+    = f.input :url, :label => false, :input_html => {:title => t('.url')}
+    %br
+    = f.input :about, :label => false, :input_html => {:title => t('.about')}
+
+  = f.submit :value => t('.submit')

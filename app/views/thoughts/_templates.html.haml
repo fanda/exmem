@@ -1,0 +1,24 @@
+%script#thoughts_EJS{"type" => "text/ejs"}
+  :plain
+    <% items.each( function(item, i) { %>
+      <div class='thought_<%= i %>'>
+        <p>
+          <%== item.text %>
+        </p>
+        <span class="actions">
+          <a href="#" class="edit">#{t 'edit'}</a> | <a href="#" class="delete">#{t 'delete'}</a>
+          | <i><%= item.attr('public') ? 'public' : 'private' %></i>
+        </span>
+      </div>
+    <% }) %>
+
+%script#thought_edit_EJS{"type" => "text/ejs"}
+  = semantic_form_for thought_ejs_template_object, :method => :put do |f|
+    = f.inputs do
+      = f.input :text, :label => false
+      -#%li.boolean.input.optional#thought_public_input
+        %input{:name=>"thought[public]", :type=>"hidden", :value=>"0"}
+        %label{:for=>"thought_public"}
+          Public
+          <input <%= item.attr("public") ? 'checked' : '' %> id="thought_public" name="thought[public]" type="checkbox" value="1">
+      = f.input :public, :as => :radio, :collection => ['Public', 'Private'], :label => false

@@ -1,0 +1,5 @@
+= semantic_form_for @thought, :html => {:class => 'new'} do |f|
+  = f.inputs do
+    = f.input :text, :label => false, :input_html => {:title => t('.text')}
+    = f.input :public, :label => false, :input_html => {:title => t('.public')}
+  = f.submit :value => t('.submit')

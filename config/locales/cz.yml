@@ -1,0 +1,79 @@
+cz:
+  or: nebo
+  edit: Upravit
+  delete: Smazat
+  title: Uspořádej svou externí paměť na EXMEM.ORG
+  name: Jméno
+  email: Email
+  provider: Služba
+  signout: Odhlásit se
+  main_board: Hlavní plocha
+  close: Zavřít
+  new_board_name: Název plochy
+  layouts:
+    header:
+      change_background: Změnit obrázek na pozadí
+      change_boxstyle: Změnit styl bloků
+      change_user: Změnit nastavení uživatele
+      settings: Nastavení
+      language: Jazyk
+      board: Plochy
+      new_board: Nová plocha
+      remove_board: Odstranit tuto plochu
+  shared:
+    ebox:
+      box_color: Barva karty
+      white: Bílá
+      red: Červená
+      green: Zelená
+      blue: Modrá
+      yellow: Žlutá
+  services:
+    signup:
+      title: Přihlášení přes vybranou službu bylo úspěšné!
+      new_auth: Prosím, potvrťte založení nového účtu
+      confirm_create: Založit nový účet
+      cancel: Storno
+    signin:
+      title: "Můžete se přihlásit pomocí:"
+      how_to_signin: Přihlašte se přes autorizační službu OpenID
+      still_dont_know_how: Stále nevíte jak se přihlásit?
+  links:
+    form:
+      title: Titulek
+      url: Adresa
+      about: O odkazu
+      submit: Uložit odkaz
+    box:
+      title: Odkazy
+  phone_numbers:
+    form:
+      name: Jméno
+      number: Číslo
+      submit: Uložit telefonní číslo
+    box:
+      title: Telefonní čísla
+  thoughts:
+    form:
+      text: Text
+      public: Veřejné
+      submit: Poslat myšlenku
+    box:
+      title: Myšlenky
+  rss_boxes:
+    form:
+      submit: Uložit nastavení
+      title: Titulek
+      url_hint: pokud je zdroj jen jeden
+      feeds_hint: mix více zdrojů, každý na jeden řádek
+      url: Jeden zdroj
+      feeds: Více zdrojů
+  alert:
+    link: Titulek i adresa jsou vyžadovány
+    thought: Text je nutno vyplnit
+    phone_number: Jméno i číslo jsou vyžadovány
+  facebox:
+    addbox:
+      title: Nová karta na plochu
+
+  welcome: <strong>EXMEM.ORG je služba pro ukládání informací</strong> v lidsky srozumitelné uspořádané podobě. <br/><br/>Tuto stránku můžete využívat jako pískoviště. Veškeré změny, které uděláte, zmizí po opětovném načtení stránky.<br/><br/>Jakmile se přihlásíte, bude každá změna v nastavení bloků okamžitě uložena.

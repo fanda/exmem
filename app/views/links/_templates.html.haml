@@ -1,0 +1,22 @@
+%script#links_EJS{"type" => "text/ejs"}
+  :plain
+    <% items.each( function(item, i) { %>
+      <div class="link_<%= i %>">
+        <p>
+          <a target="_blank" href="<%= item.url %>"><%= item.title %></a>
+          <br/>
+          <em><%= item.about %></em>
+        </p>
+        <span class="actions">
+          <a href="#" class="edit">#{t 'edit'}</a>  <a href="#" class="delete">#{t 'delete'}</a>
+        </span>
+      </div>
+    <% }) %>
+
+%script#link_edit_EJS{"type" => "text/ejs"}
+  = semantic_form_for link_ejs_template_object, :method => :put do |f|
+    = f.inputs do
+      = f.input :title, :label => false
+      = f.input :url, :label => false, :input_html => {:type => 'url'}
+      %br
+      = f.input :about, :label => false

@@ -1,0 +1,24 @@
+#columns
+  - if current_user and not @board.pref_columns.empty?
+    - AppConfig.columns_count.times do |cnum|
+      .column.ui-sortable
+        - if boxes = @board.pref_columns[cnum.to_s]
+          - boxes.each do |box|
+            .box{:id => "#{box}", :class => "#{colour_for box}"}
+              = render_partial_for box
+  - else
+    .column.ui-sortable
+      - unless current_user
+        #welcome_box.box{:class => "white"}
+          = render :partial => '/main/welcome'
+      #links_box.box{:class => "#{colour_for 'links_box', 'green'}"}
+        = render :partial => '/links/box'
+    .column.ui-sortable
+      #phone_numbers_box.box{:class => "#{colour_for 'phone_numbers_box', 'red'}"}
+        = render :partial => '/phone_numbers/box'
+      #thoughts_box.box{:class => "#{colour_for 'thoughts_box', 'green'}"}
+        = render :partial => '/thoughts/box'
+    .column.ui-sortable
+  .out
+
+= render :partial => '/users/jsinit'

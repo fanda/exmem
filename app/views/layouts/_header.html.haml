@@ -1,0 +1,30 @@
+%h1.dib.left
+  = link_to "EXternMEMory.ORGanized", root_url
+
+%div.right
+  %select.menu
+    %option{ :value => "!" }
+      = t '.language'
+    %option{ :value => "?l=en" } English
+    %option{ :value => "?l=cz" } Česky
+  - if user_signed_in?
+    %select.menu#board
+      %option{ :value => "!" }= t '.board'
+      - current_user.boards.each do |bo|
+        %option{ :value => "#{board_path(bo)}" }= bo.name
+      %option{ :disabled => true }
+      %option{ :value => "!new_board" }= t '.new_board'
+      %option{ :value => "!remove_board" }= t '.remove_board'
+    %select.menu
+      %option{ :value => "!" }= t '.settings'
+      %option{ :disabled => true }= t '.change_background'
+      %option{ :disabled => true }= t '.change_boxstyle'
+      %option{ :disabled => true }= t '.change_user'
+    %select.menu
+      %option{ :value => "!" }= current_user.email
+      -#%option{ :value => "#{root_url}", :rel => 'facebox' }= t 'settings'
+      %option{ :value => "#{signout_services_path}" }= t 'signout'
+  - else
+    %span Sign in with:
+    = render '/services/list'
+.out

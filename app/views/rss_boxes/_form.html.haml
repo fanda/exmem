@@ -1,0 +1,10 @@
+= semantic_form_for @rss_box, :url => rss_boxes_path, :method => method||:post do |f|
+  = f.inputs do
+    = f.input :title, :label => t('.title')
+  = f.inputs do
+    = f.input :url, :hint => t('.url_hint'), :label => false, :input_html => {:title => t('.url')}
+    %strong=t 'or'
+    = f.input :feeds, :hint => t('.feeds_hint'), :label => false, :input_html => {:title => t('.feeds')}
+
+  = f.actions do
+    = f.submit :value => t('.submit')

@@ -1,0 +1,25 @@
+window.<%= class_name %> = can.Model({
+  findAll : 'GET <%= "<%= Rails.application.routes.url_helpers.#{plural_name}_path \%\>" %>'
+
+  findOne : ('GET ' + unescape('<%= "<%= Rails.application.routes.url_helpers.#{singular_name}_path('{id}') \%\>" %>'))
+
+  create  : (attrs, <%= singular_name %>) ->
+    url = '<%= "<%= Rails.application.routes.url_helpers.#{plural_name}_path \%\>" %>'
+    return $.post(url, attrs, (id) ->
+        <%= singular_name %>.attr('id', id)
+      , "json")
+
+  update  : (attrs, <%= singular_name %> ) ->
+    url = unescape('<%= "<%= Rails.application.routes.url_helpers.#{singular_name}_path('{id}') \%\>" %>').replace('{id}', <%= singular_name %>.id)
+    return $.post(url, attrs, null, "json")
+
+  destroy : ('DELETE ' + unescape('<%= "<%= Rails.application.routes.url_helpers.#{singular_name}_path('{id}') \%\>" %>'))
+
+
+  #init: () ->
+  #  @validatePresenceOf ['title', 'url']
+
+}, {})
+
+window.<%= class_name %>.prototype.alert = () ->
+  alert('<%= "<%= I18n.t('alert.#{singular_name}') \%\>" %>')
